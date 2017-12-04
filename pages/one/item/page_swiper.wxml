@@ -1,0 +1,34 @@
+<import src="weather.wxml" />
+<import src="draw.wxml" />
+<import src="essay.wxml" />
+<import src="answer.wxml" />
+<import src="music.wxml" />
+<import src="video.wxml" />
+
+<template name="page_swiper">
+
+  <view style="display: flex; flex-direction:column;">
+
+    <template is="weather" data="{{weather:content.weather, date:content.date}}"></template>
+
+    <!--列表循环显示-->
+    <view wx:for="{{content.content_list}}" wx:for-item="item" wx:key="">
+      <!--绘画-->
+      <template wx:if="{{item.category == 0}}" is="draw" data="{{item:item}}"></template>
+
+      <!--文章-->
+      <template wx:if="{{item.category == 1 || item.category == 2}}" is="essay" data="{{item:item}}"></template>
+
+      <!--问答-->
+      <template wx:if="{{item.category == 3 || item.category == 6}}" is="answer" data="{{item:item}}"></template>
+
+      <!--音乐-->
+      <template wx:if="{{item.category == 4}}" is="music" data="{{item:item, playPath:playingMusicUrl}}"></template>
+
+      <!--影视-->
+      <template wx:if="{{item.category == 5}}" is="video" data="{{item:item}}"></template>
+    </view>
+
+  </view>
+
+</template>

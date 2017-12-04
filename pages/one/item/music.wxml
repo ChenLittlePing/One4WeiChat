@@ -1,0 +1,22 @@
+<template name="music">
+  <view style="display:flex; background-color:#fff; margin-top:20rpx; width:100%; flex-direction:column; align-items:center">
+    <text style="margin-top:20rpx; color:gray; font-size:25rpx">- {{item.tag_list[0]? item.tag_list[0].title:'音乐'}} -</text>
+    <text style="margin-top:20rpx; width:90%; font-size:30rpx; font-weight:700">{{item.title}}</text>
+    <text style="margin-top:20rpx; width:90%; font-size:25rpx; color:gray">文/{{item.author.user_name}}</text>
+    <view style="margin-top:20rpx; width:90%">
+      <view style="width:50%; height:0.5rpx; background-color:gray"></view>
+    </view>
+
+    <view style="display:flex; flex-direction:column; align-items:center;  justify-content:center; width:500rpx; height:500rpx; border-radius:50%;background-image:url({{item.img_url}}); background-size: contain" bindtap="playOrPauseMusic" data-url="{{item.audio_url}}">
+      <view style="display:flex; flex-direction:column; align-items:center;  justify-content:center; width:100rpx; height:100rpx; border-radius:50%; background-color:#000;opacity:0.85">
+        <image wx:if="{{playPath !== item.audio_url}}" style="width:40rpx; height:40rpx;" src="../../../../image/ic_media_play.png" mode="aspectFit"></image>
+        <image wx:if="{{playPath === item.audio_url}}" style="width:40rpx; height:40rpx;" src="../../../../image/ic_media_pause.png" mode="aspectFit"></image>
+      </view>
+    </view>
+    <view style="width:90%">
+      <view style="width:50%; height:0.5rpx; background-color:gray"></view>
+    </view>
+    <text style="margin-top:20rpx; width:90%; color:gray; font-size:22rpx">{{item.music_name}}·{{item.audio_author}}|{{item.audio_album}}</text>
+    <text style="margin-top:20rpx; margin-bottom:20rpx; width:90%; color:gray; font-size:25rpx; line-height:50rpx;">{{item.forward}}</text>
+  </view>
+</template>

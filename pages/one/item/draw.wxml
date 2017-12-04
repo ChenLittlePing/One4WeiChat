@@ -1,0 +1,9 @@
+@import "./item.wxss"
+<template name="draw">
+  <view style="width:100%; display:flex; flex-direction:column; align-items:center; background:#fff">
+    <image style="margin-top:5rpx; width:100%;" mode="widthFix" src="{{item.img_url}}"></image>
+    <text style="font-size:22rpx; color:gray; margin-top:10rpx">{{item.title}} | {{item.pic_info}}</text>
+    <text style="width:70%; font-size:25rpx; margin-top:30rpx; line-height:50rpx;">{{item.forward}}</text>
+    <text style="margin-top:40rpx; margin-bottom:40rpx; font-size:22rpx; color:gray">{{item.words_info}}</text>
+  </view>
+</template>

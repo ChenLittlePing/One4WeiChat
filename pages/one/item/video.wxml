@@ -1,0 +1,10 @@
+<template name="video">
+  <view style="margin-top:20rpx; width:100%; background-color:#fff; display:flex; flex-direction:column; align-items:center" bindtap="gotoDetail" data-category="{{item.category}}" data-item_id="{{item.item_id}}" data-source_id="{{item.id}}" data-title="一个影视">
+    <text style="margin-top:20rpx; color:gray; font-size:25rpx">- 影视 -</text>
+    <text style="margin-top:20rpx; width:90%; font-size:30rpx; font-weight:700">{{item.title}}</text>
+    <text style="margin-top:20rpx; width:90%; font-size:25rpx; color:gray">文/{{item.author.user_name}}</text>
+    <image style="margin-top:20rpx; width:90%; height:90%" mode="widthFix" src="{{item.img_url}}"></image>
+    <text style="margin-top:20rpx; margin-bottom:20rpx; width:90%; font-size:25rpx; line-height:50rpx; color:gray">{{item.forward}}</text>
+    <text style="margin-top:10rpx; margin-bottom:20rpx; width:90%; font-size:25rpx; color:gray; text-align:right">-- 《{{item.subtitle}}》</text>
+  </view>
+</template>

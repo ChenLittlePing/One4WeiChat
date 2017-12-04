@@ -1,0 +1,8 @@
+@import "./item.wxss"
+
+<template name="weather">
+  <view style="width: 100%; display: flex; flex-direction:column; align-items:center; background:#fff">
+    <text class="weather_date">{{date}}</text>
+    <text wx:if="{{weather.climate}}" class="weather_climate">{{weather.climate}}，{{weather.city_name}}</text>
+  </view>
+</template>

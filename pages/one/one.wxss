@@ -1,0 +1,18 @@
+/* one.wxss */
+
+.weather_date {
+  font-size: 30rpx;
+  font-weight: 700;
+  font-family: 'Times New Roman';
+}
+
+.weather_climate {
+  font-size: 22rpx;
+  font-family: 'Arial Narrow', Arial, sans-serif;
+}
+
+Page {
+  background-color: lightgrey;
+  height: 100%;
+  width: 100%;
+}

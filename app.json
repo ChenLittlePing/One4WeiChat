@@ -1,0 +1,43 @@
+{
+  "pages":[
+    "pages/one/one",
+    "pages/reading-detail/reading-detail",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "One",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "selectedColor": "black",
+    "list": [
+      {
+        "pagePath": "pages/one/one",
+        "iconPath": "./image/home.png",
+        "selectedIconPath": "./image/home_active.png",
+        "text": "一个"
+      },
+      {
+        "pagePath": "pages/reading/reading",
+        "iconPath": "./image/reading.png",
+        "selectedIconPath": "./image/reading_active.png",
+        "text": "阅读"
+      },
+      {
+        "pagePath": "pages/music/music",
+        "iconPath": "./image/music.png",
+        "selectedIconPath": "./image/music_active.png",
+        "text": "音乐"
+      },
+      {
+        "pagePath": "pages/movie/movie",
+        "iconPath": "./image/movie.png",
+        "selectedIconPath": "./image/movie_active.png",
+        "text": "影视"
+      }
+    ]
+  }
+}

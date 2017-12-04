@@ -1,0 +1,15 @@
+<!--one.wxml-->
+<import src="item/page_swiper.wxml" />
+
+<swiper style="display:flex; flex:1; width:100%; height:100%" indicator-dots="{{false}}" autoplay="{{false}}" bindchange="pageChange">
+
+  <block wx:for="{{dayId}}" wx:for-index="idx" wx:for-item="id" wx:key="">
+    <swiper-item style="width:100%; height:100%">
+      <scroll-view scroll-y style="height:100%; width:100%">
+
+        <template is="page_swiper" data="{{content:oneList[idx], playingMusicUrl}}"></template>
+
+      </scroll-view>
+    </swiper-item>
+  </block>
+</swiper>

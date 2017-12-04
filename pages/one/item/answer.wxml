@@ -1,0 +1,10 @@
+<template name="answer">
+  <view style="margin-top:20rpx; width:100%; background-color:#fff; display:flex; flex-direction:column; align-items:center">
+    <text wx:if="{{item.ad_id == 0}}" style="margin-top:20rpx; color:gray; font-size:25rpx">- 问答 -</text>
+    <text wx:if="{{item.ad_id != 0}}" style="margin-top:20rpx; color:gray; font-size:25rpx">- 广告 -</text>
+    <text style="margin-top:20rpx; width:90%; font-size:30rpx; font-weight:700">{{item.title}}</text>
+    <text style="margin-top:20rpx; width:90%; font-size:25rpx; color:gray">{{item.answerer.user_name}}答</text>
+    <image style="margin-top:20rpx; width:90%; height:90%" mode="widthFix" src="{{item.img_url}}"></image>
+    <text style="margin-top:20rpx; margin-bottom:22rpx; width:90%; font-size:25rpx; color:gray; line-height:50rpx">{{item.forward}}</text>
+  </view>
+</template>
